@@ -1,0 +1,124 @@
+syntax = "proto3";
+
+// The greeting service definition.
+service Greeter {
+
+ // Get total number of employees in the bank
+ rpc GetTotalEmployees(BankRequest) returns (TotalEmployeesResponse);
+
+ // Add a branch to the bank
+ rpc AddBranch(BankAllAtributesResponse) returns (BranchResponse);
+
+ // get a branch with ID
+ rpc GetBranchesAll(Empty) returns (BankAllAtributesResponse);
+
+ rpc GetCashRequirement(BankRequest) returns (GetCashRequirementResponse);
+
+ rpc UpdateBranchSize(UpdateBranchSizeRequest) returns (UpdateBranchSizeResponse);
+}
+
+
+// Request message for getting total employees
+message BankRequest {
+ int32 branchID = 1;
+}
+
+message Empty {}
+
+
+message GetCashRequirementResponse {
+    int32 branchMinCash = 1;
+   }
+
+// Response message for total employees
+message TotalEmployeesResponse {
+ int32 total_employees = 1;
+}
+
+// Employee information
+message Employee {
+ string employee_id = 1;
+ string name = 2;
+ string branchID = 3;
+}
+
+// Response message for employee operations
+// success / failure message
+message EmployeeResponse {
+ string message = 1;
+}
+
+// Request message for deleting an employee
+message EmployeeID {
+ string employee_id = 1;
+}
+
+// Response message for delete operations
+message DeleteResponse {
+ string message = 1;
+}
+
+// Request message for getting cash
+message BranchInfo {
+ string branchID = 1;
+}
+
+// Response message for cash amount
+message CashResponse {
+ double branchMinCash = 1;
+}
+
+// Request message for updating cash
+message CashUpdateRequest {
+ string branchID = 1;
+ double branchMinCash = 2;
+}
+
+// Response message for cash update operations
+message CashUpdateResponse {
+ string message = 1;
+}
+
+// Client information
+message Client {
+ string client_id = 1;
+ string name = 2;
+ string branchID = 3;
+}
+
+// Branch information
+message Branch {
+ string location = 1;
+ int32 number_of_employees = 2;
+}
+
+// Response message for branch operations
+message BranchResponse {
+ string message = 1;
+}
+
+message UpdateBranchSizeRequest{
+    int32 branchID = 1;
+    int32 newNumberOfEmployees = 2;
+}
+
+message BankAllAtributesResponse{
+    int32 branchID = 1;
+    int32 branchSize = 2;
+    string branchLocation = 3;
+    int32  branchMinCash = 4;
+}
+
+message BranchesResponseAll {
+
+    repeated BankAllAtributesResponse branches = 1;
+
+}
+
+message UpdateBranchSizeResponse {
+    
+    int32 branchID = 1;
+    int32 branchMinCash = 2;
+    string branchLocation = 3;
+
+}

@@ -1,33 +1,51 @@
 {
   "Branches": [
     {
-      "branchID": 6128,
-      "branchSize": 90,
-      "branchLocation": "Finch",
-      "branchMinCash": 100000
-    },
-    {
       "branchID": 2390,
       "branchSize": 80,
       "branchLocation": "Brampton",
       "branchMinCash": 100000
     },
     {
-      "branchID": 5282,
-      "branchSize": 79098,
+      "branchID": 2518,
+      "branchSize": 34,
+      "branchLocation": "Finch",
+      "branchMinCash": 50000
+    },
+    {
+      "branchID": 6913,
+      "branchSize": 748,
       "branchLocation": "Mississauga",
       "branchMinCash": 200000
     },
     {
-      "branchID": 6018,
-      "branchSize": 45999,
-      "branchLocation": "Union",
-      "branchMinCash": 200000
+      "branchID": 3860,
+      "branchSize": 56,
+      "branchLocation": "Vaughan",
+      "branchMinCash": 100000
     },
     {
-      "branchID": 2518,
-      "branchSize": 34,
-      "branchLocation": "Finch",
+      "branchID": 1237,
+      "branchSize": 55,
+      "branchLocation": "Vaughan",
+      "branchMinCash": 100000
+    },
+    {
+      "branchID": 1564,
+      "branchSize": 69,
+      "branchLocation": "Union",
+      "branchMinCash": 100000
+    },
+    {
+      "branchID": 7240,
+      "branchSize": 14,
+      "branchLocation": "Mississauga",
+      "branchMinCash": 50000
+    },
+    {
+      "branchID": 6424,
+      "branchSize": 5,
+      "branchLocation": "Union",
       "branchMinCash": 50000
     }
   ]
